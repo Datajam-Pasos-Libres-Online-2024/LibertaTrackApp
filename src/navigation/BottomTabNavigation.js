@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FooterHome from "../assets/Icons/FooterHome";
 import FooterSearch from "../assets/Icons/FooterSearch";
+import FooterMessageIcon from "../assets/Icons/FooterMessageIcon";
 import Search from "../screens/Search";
 import ChatBot from "../screens/ChatBot";
 import Home from "../screens/Home";
