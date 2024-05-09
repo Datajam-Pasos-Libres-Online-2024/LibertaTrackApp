@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Text } from 'react-native';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 import { Amplify } from 'aws-amplify';
+import AppNavigation from './src/navigation/AppNavigation';
 
 Amplify.configure({
   Auth: {
@@ -19,11 +20,12 @@ function SignOutButton() {
 
 function App() {
   return (
-    <Authenticator.Provider>
-      <Authenticator>
-        <SignOutButton />
-      </Authenticator>
-    </Authenticator.Provider>
+    // <Authenticator.Provider>
+    //   <Authenticator>
+    //     <SignOutButton />
+    //   </Authenticator>
+    // </Authenticator.Provider>
+    <AppNavigation/>
   );
 }
 export default App;
