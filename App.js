@@ -5,6 +5,8 @@ import AppNavigation from './src/navigation/AppNavigation';
 import MyAuthenticator from './src/components/core/Authenticator';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 
+
+
 Amplify.configure({
   Auth: {
     Cognito: {
@@ -60,8 +62,8 @@ function App() {
   return (
     <Authenticator.Provider>
       <Authenticator signUpAttributes={["given_name", "family_name"]} formField={signUpFields} variation="modal">
-        <Text>xd</Text>
-        <SignOutButton />
+        <AppNavigation/>
+        {/* <SignOutButton /> */}
       </Authenticator>
     </Authenticator.Provider>
   );
