@@ -28,7 +28,7 @@ const Tipo = ({ setTipo }) => {
 
 
     return (
-        <View>
+        <View style={{ height: 25, backgroundColor: 'white', justifyContent: 'center' }}>
             <RNPickerSelect
                 onValueChange={(value) => [console.log(value), setTipo(value)]}
                 items={[
@@ -43,8 +43,9 @@ const Tipo = ({ setTipo }) => {
 
 const Anonimo = ({ setIsAnonimo }) => {
     return (
-        <View>
+        <View style={{ height: 25, backgroundColor: 'white', justifyContent: 'center' }}>
             <RNPickerSelect
+
                 onValueChange={(value) => setIsAnonimo(value)}
                 items={[
                     { label: 'Sí', value: 'si' },
@@ -58,7 +59,7 @@ const Anonimo = ({ setIsAnonimo }) => {
 
 const Company = ({ setCompany }) => {
     return (
-        <View>
+        <View style={{ height: 25, backgroundColor: 'white', justifyContent: 'center' }}>
             <RNPickerSelect
                 onValueChange={(value) => setCompany(value)}
                 items={[
@@ -95,32 +96,50 @@ const Location = ({ location, setLocation }) => {
 
 const Description = ({ description, setDescription }) => {
     return (
-        <TextInput
-            style={styles.inputDescription}
-            onChangeText={setDescription} // Actualiza el estado del texto cuando cambia
-            value={description} // El valor del texto en el input
-            multiline={true}
-            textAlignVertical="top"
-            placeholder="Escribe aqui tu denuncia con el mayor detalle posible"
-        />
+        <View style={{ height: 80, backgroundColor: 'white', justifyContent: 'center' }}>
+            <TextInput
+                style={styles.inputDescription}
+                onChangeText={setDescription} // Actualiza el estado del texto cuando cambia
+                value={description} // El valor del texto en el input
+                multiline={true}
+                textAlignVertical="top"
+                placeholder="Escribe aqui tu denuncia con el mayor detalle posible"
+            />
+        </View>
     )
 }
 
 const Name = ({ name, setName }) => {
     return (
-        <TextInput
-            style={styles.inputDescription}
-            onChangeText={setName} // Actualiza el estado del texto cuando cambia
-            value={name} // El valor del texto en el input
-            placeholder="Escribe tu nombre"
-        />
+        <View style={{ height: 25, backgroundColor: 'white', justifyContent: 'center', items:'center'}}>
+            <TextInput
+                style={styles.inputName}
+                onChangeText={setName} // Actualiza el estado del texto cuando cambia
+                value={name} // El valor del texto en el input
+                placeholder="Escribe tu nombre"
+
+            />
+        </View>
     )
 }
 
-const SendButton = () => {
+const IDNumber = ({ idNumber, setIdNumber }) => {
+    return (
+        <View style={{ height: 25, backgroundColor: 'white', justifyContent: 'center' }}>
+            <TextInput
+                style={styles.inputName}
+                onChangeText={setIdNumber} // Actualiza el estado del texto cuando cambia
+                value={idNumber} // El valor del texto en el input
+                placeholder="Escribe tu No. de identificacion"
+            />
+        </View>
+    )
+}
+
+const SendButton = ({ onPress }) => {
     return (
         <View className='w-full my-5'>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={onPress}>
                 <View style={styles.sendButton}>
                     <Text style={styles.textSendButton} >Enviar Denuncia</Text>
                 </View>
@@ -138,7 +157,26 @@ const ComplaintsAndSuggestions = ({ navigation }) => {
     const [company, setCompany] = useState('')
     const [location, setLocation] = useState(''); // Estado inicial para el texto
     const [description, setDescription] = useState('')
-    const [name, setName]= useState('')
+    const [name, setName] = useState('')
+    const [idNumber, setIdNumber] = useState('')
+
+    const handleSend = () => {
+
+        console.log(tipo)
+        console.log(isAnonimo)
+        console.log(isAnonimo)
+
+        console.log(company)
+
+        console.log(description)
+
+        console.log(name)
+        console.log(idNumber)
+
+
+
+
+    }
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -165,13 +203,13 @@ const ComplaintsAndSuggestions = ({ navigation }) => {
                         <SectionTitles title={'Nombre'} />
                         <Container component={<Name name={name} setName={setName} />} />
                         <SectionTitles title={'No. identifiacion'} />
-                        <Container  component={<Name name={name} setName={setName} />}/>
+                        <Container component={<IDNumber idNumber={idNumber} setIdNumber={setIdNumber} />} />
                     </>}
                 <SectionTitles title={'Ubicación'} />
                 <Container component={<Location location={location} setLocation={setLocation} />} />
                 <SectionTitles title={'Descripcion'} />
                 <Container component={<Description description={description} setDescription={setDescription} />} />
-                <SendButton />
+                <SendButton onPress={handleSend} />
                 <View className='h-28'>
 
                 </View>
@@ -203,6 +241,7 @@ const styles = StyleSheet.create({
     },
     profileInfo: {
         alignItems: 'start',
+        justifyContent: 'center',
         backgroundColor: 'white',
         borderRadius: 20,
         marginHorizontal: 10
@@ -221,7 +260,13 @@ const styles = StyleSheet.create({
         fontWeight: '500'
     },
     inputDescription: {
-        height: 60
+        flex: 1
+    }, 
+    inputName:{
+       marginTop:-10,
+       height:35,
+       alignItems:'center',
+       justifyContent: 'center'
     }
 
 })

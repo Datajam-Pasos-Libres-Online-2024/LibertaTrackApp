@@ -10,8 +10,8 @@ import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 Amplify.configure({
   Auth: {
     Cognito: {
-      userPoolClientId: "26oh8a7q2pkds601c5gesvikqn",
-      userPoolId: "us-east-1_fbUmF1i2Y",
+      userPoolClientId: "69k1ud2fpil8f4kgn0i6tpeacp",
+      userPoolId: "us-east-1_oxsDMoGbu",
     }
   }
 });

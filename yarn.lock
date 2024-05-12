@@ -8122,6 +8122,11 @@ react-native-get-random-values@^1.11.0, react-native-get-random-values@>=1.9.0:
   dependencies:
     fast-base64-decode "^1.0.0"
 
+react-native-image-picker@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.npmjs.org/react-native-image-picker/-/react-native-image-picker-7.1.2.tgz"
+  integrity sha512-b5y5nP60RIPxlAXlptn2QwlIuZWCUDWa/YPUVjgHc0Ih60mRiOg1PSzf0IjHSLeOZShCpirpvSPGnDExIpTRUg==
+
 react-native-pdf@^6.7.5:
   version "6.7.5"
   resolved "https://registry.npmjs.org/react-native-pdf/-/react-native-pdf-6.7.5.tgz"
@@ -8129,6 +8134,11 @@ react-native-pdf@^6.7.5:
   dependencies:
     crypto-js "4.2.0"
     deprecated-react-native-prop-types "^2.3.0"
+
+react-native-permissions@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.npmjs.org/react-native-permissions/-/react-native-permissions-4.1.5.tgz"
+  integrity sha512-r6VMRacASmtRHS+GZ+5HQCp9p9kiE+UU9magHOZCXZLTJitdTuVHWZRrb4v4oqZGU+zAp3mZhTQftuMMv+WLUg==
 
 react-native-picker-select@^9.1.3:
   version "9.1.3"
@@ -8178,7 +8188,7 @@ react-native-url-polyfill@^2.0.0:
   dependencies:
     whatwg-url-without-unicode "8.0.0-3"
 
-react-native@*, "react-native@^0.0.0-0 || >=0.60 <1.0", "react-native@^0.70 || ^0.71 || ^0.72 || ^0.73", react-native@^0.73.0, "react-native@>= 0.67", react-native@>=0.56, react-native@>=0.57, react-native@>=0.59, react-native@>=0.60.0, react-native@>=0.70:
+react-native@*, "react-native@^0.0.0-0 || >=0.60 <1.0", "react-native@^0.70 || ^0.71 || ^0.72 || ^0.73", react-native@^0.73.0, "react-native@>= 0.67", react-native@>=0.56, react-native@>=0.57, react-native@>=0.59, react-native@>=0.60.0, react-native@>=0.70, react-native@>=0.70.0:
   version "0.73.8"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.73.8.tgz"
   integrity sha512-EPURbV36NW5H0eVTmePtwuMJfxFvFokEgbaw61pCqdeOLeaGVxsU54RK8RIXpehzPuTGpQVVxTUKbvaM7F+TTw==
@@ -8238,7 +8248,7 @@ react-test-renderer@18.2.0:
     react-shallow-renderer "^16.15.0"
     scheduler "^0.23.0"
 
-react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.14.0 || ^17.0 || ^18.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17 || ^18", react@^18.2.0, react@>=16.0, react@>=16.3, react@>=16.8, react@>=17.0.0, react@18.2.0:
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.14.0 || ^17.0 || ^18.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17 || ^18", react@^18.2.0, react@>=16.0, react@>=16.3, react@>=16.8, react@>=17.0.0, react@>=18.1.0, react@18.2.0:
   version "18.2.0"
   dependencies:
     loose-envify "^1.1.0"
