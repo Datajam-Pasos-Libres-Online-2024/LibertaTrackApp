@@ -34,7 +34,7 @@ const posts = [
         image: "https://www.shutterstock.com/shutterstock/photos/284735126/display_1500/stock-photo-happy-blonde-girl-smiling-portrait-in-the-beach-wearing-hat-and-sunglasses-summer-holidays-284735126.jpg",
         isCoach: true,
         postImage: "https://media.istockphoto.com/id/517055568/es/foto/el-trabajo-infantil-camboya.jpg?s=612x612&w=0&k=20&c=1mPqmXx033QHpOE3GIB93OpHo02YiHD7LTGvMgfKgn8=",
-        description: "This is a description",
+        description: "La esclavitud moderna se refiere a formas contemporáneas de explotación laboral y coerción que privan a las personas de su libertad, obligándolas a vivir en condiciones de extrema desigualdad y dependencia. A continuación, detallo algunos de los principales tipos de esclavitud moderna \n 1) Trabajo forzoso. \n 2) Trata de personas. \n 3) Explotación sexual. \n 4) Servidumbre por deudas. \n 5) Esclavitud infantil. \n 6) Matrimonio forzado.",
         numberOfComments: 2,
     }
 ];
@@ -121,7 +121,7 @@ const CommentSection = (props) => {
 
 const Post = (props) => {
     return (
-        <View className="flex flex-column bg-white my-5 mx-5 rounded-2xl h-[420px] p-3">
+        <View className="flex flex-column bg-white my-5 mx-5 rounded-2xl  p-3">
             <UserHeader name={props.user} image={props.image} isCoach={props.isCoach} />
             <MainImage image={props.postImage} />
             <DescriptionSection description={props.description} user={props.user} />
