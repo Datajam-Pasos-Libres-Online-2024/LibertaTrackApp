@@ -116,9 +116,10 @@ const BottomTabNavigation = ({ navigation }) => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View style={[styles.avatarContainer, focused && styles.avatarSelected]}>
-                                <Image source={{ uri: "https://media.discordapp.net/attachments/1232163662488277017/1238596078337523713/ui_user_profile_avatar_person_icon_208734.png?ex=663fdbfd&is=663e8a7d&hm=0a340a6e36d4f9f5cac29122efb2e8f67531dd0e8157dcc3e78ec8c5527dbb21&=&format=webp&quality=lossless&width=593&height=593" }}
-                                    height={29}
-                                    width={29}
+                                <Image source={require('../assets/Icons/profile.jpg')}
+                                    height={1}
+                                    width={1}
+                                    style={{borderRadius:20, height: 25, width: 25}}
                                 />
                             </View>
                         )

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
-import { RNCamera } from 'react-native-camera';
 
 class CameraApp extends Component {
   takePicture = async () => {
@@ -34,7 +33,10 @@ class CameraApp extends Component {
 
 const Camera = () =>{
     return(
-        <CameraApp/>
+      <View>
+        <Text>camara</Text>
+      </View>
+        
     )
 }
 
