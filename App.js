@@ -4,8 +4,8 @@ import { Amplify } from 'aws-amplify';
 import AppNavigation from './src/navigation/AppNavigation';
 import MyAuthenticator from './src/components/core/Authenticator';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
-
-
+import { configStore } from './src/redux/store/configStore';
+import { Provider } from 'react-redux';
 
 Amplify.configure({
   Auth: {
@@ -60,12 +60,14 @@ function SignOutButton() {
 function App() {
 
   return (
-    <Authenticator.Provider>
-      <Authenticator signUpAttributes={["given_name", "family_name"]} formField={signUpFields} variation="modal">
-        <AppNavigation/>
-        {/* <SignOutButton /> */}
-      </Authenticator>
-    </Authenticator.Provider>
+    <Provider store={configStore}>
+      <Authenticator.Provider>
+        <Authenticator signUpAttributes={["given_name", "family_name"]} formField={signUpFields} variation="modal">
+          <AppNavigation />
+          {/* <SignOutButton /> */}
+        </Authenticator>
+      </Authenticator.Provider>
+    </Provider>
   );
 }
 export default App;
